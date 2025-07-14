@@ -8,33 +8,63 @@
 <body>
     <header>
         <h1>🌿 Bio Eco Corner</h1>
-        <p>Explore the wonders of nature and meet our fascinating animal friends!</p>
+        <p>Explore the wonders of biodiversity—meet animals from rainforests, deserts, and beyond!</p>
+
+        <nav>
+            <label for="animal-select">Learn About:</label>
+            <select id="animal-select" onchange="scrollToAnimal(this.value)">
+                <option value="">-- Select an Animal --</option>
+                <option value="dragon-water">Chinese Water Dragon</option>
+                <option value="dragon-bearded">Bearded Dragon</option>
+                <option value="caique">White-Bellied Caique</option>
+            </select>
+        </nav>
     </header>
 
     <section id="animals">
         <h2>🐾 Featured Animals</h2>
 
-        <div class="animal-card">
+        <div class="animal-card" id="dragon-water">
             <h3>Chinese Water Dragon</h3>
-            <p><strong>Habitat:</strong> Southeast Asian rainforests</p>
-            <p><strong>Fun Fact:</strong> Can stay underwater for 25 minutes!</p>
+            <p><strong>Habitat:</strong> Tropical rainforests near streams and rivers</p>
+            <p><strong>Diet:</strong> Insects, worms, small fish, and leafy vegetables</p>
+            <p><strong>Traits:</strong> Long muscular tail for swimming, powerful legs for climbing</p>
+            <p><strong>Fun Fact:</strong> Can hold their breath underwater for up to 25 minutes and love basking in warm spots.</p>
+            <p><strong>Conservation Status:</strong> Least Concern, but habitat destruction is a growing threat.</p>
         </div>
 
-        <div class="animal-card">
+        <div class="animal-card" id="dragon-bearded">
             <h3>Bearded Dragon</h3>
-            <p><strong>Habitat:</strong> Australian deserts and woodlands</p>
-            <p><strong>Fun Fact:</strong> Uses arm waves to say "Hi!"</p>
+            <p><strong>Habitat:</strong> Dry deserts and open woodlands of Australia</p>
+            <p><strong>Diet:</strong> Crickets, roaches, greens, and the occasional pinky mouse</p>
+            <p><strong>Traits:</strong> Beard puffing to express emotions, capable of head-bobbing and arm-waving</p>
+            <p><strong>Fun Fact:</strong> They change the color of their beard when communicating—black signals stress or dominance!</p>
+            <p><strong>Conservation Status:</strong> Not currently threatened; popular in reptile-friendly homes.</p>
         </div>
 
-        <div class="animal-card">
+        <div class="animal-card" id="caique">
             <h3>White-Bellied Caique</h3>
-            <p><strong>Habitat:</strong> Amazon rainforest</p>
-            <p><strong>Fun Fact:</strong> Nicknamed “the clown of parrots” for playful flips</p>
+            <p><strong>Habitat:</strong> Amazon Basin lowland forests</p>
+            <p><strong>Diet:</strong> Berries, fruits, seeds, and insects</p>
+            <p><strong>Traits:</strong> Hops instead of walks, rolls and flips during playtime, highly social</p>
+            <p><strong>Fun Fact:</strong> Often called the “clown of parrots” because of their antics and curious nature. They also mimic sounds with impressive clarity.</p>
+            <p><strong>Conservation Status:</strong> Stable, though habitat loss affects some subspecies.</p>
         </div>
     </section>
 
     <footer>
         <p>© 2025 Bio Eco Corner. Celebrate biodiversity!</p>
     </footer>
+
+    <script>
+        function scrollToAnimal(id) {
+            if (id) {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                }
+            }
+        }
+    </script>
 </body>
 </html>
